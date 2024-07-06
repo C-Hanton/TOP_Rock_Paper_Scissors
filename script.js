@@ -53,7 +53,7 @@ Rock Paper Scissors Game
 
  function playRound(human, computer) {
 
-    human = getHumanChoice();
+    human = getHumanChoice().toLowerCase();
     computer = getComputerChoice();
     if (human == computer){
         return 'It is a Tie!'
