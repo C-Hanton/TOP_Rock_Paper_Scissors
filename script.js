@@ -28,7 +28,8 @@ Rock Paper Scissors Game
  -move playRound and score variables into playGame
  -play 5 rounds by calling playGame 5 times */ 
 
-
+ getHumanScore = 0;
+ getComputerScore = 0;
 
  function getComputerChoice () {
     let number = 0;
@@ -56,5 +57,6 @@ Rock Paper Scissors Game
  function getHumanChoice(){
     let humanChoice = prompt("Choose Rock, Paper or Scissors");
     humanChoice = humanChoice.toLowerCase();
-    console.log(humanChoice);
+    //console.log(humanChoice);
  }
+
