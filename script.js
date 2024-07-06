@@ -32,36 +32,27 @@ Rock Paper Scissors Game
  -move playRound and score variables into playGame
  -play 5 rounds by calling playGame 5 times */ 
 
- getHumanScore = 0;
- getComputerScore = 0;
+ let = getHumanScore = 0;
+ let = getComputerScore = 0;
+ let humanChoice;
+ let computerChoice;
 
- function getComputerChoice () {
-    let number = 0;
-    number = Math.floor(Math.random() * (3 - 1 + 1)) +1;
-    console.log(number)
 
-    switch (number){
-        case 1:
-            number == 1;
-            return 'rock'
-            break;
-        case 2:
-            number == 2;
-            return 'paper'
-            break;
-        case 3:
-            number == 3;
-            return 'scissors'
-            break;
-    }
+ function getComputerChoice() {
+    let number = Math.floor(Math.random() * (3 - 1 + 1));
+    //console.log(number)
+    let choices = ['rock','paper','scissors'];
+    return choices[number];
+    
 
+    
  }
 
-
+/*
  function getHumanChoice(){
-    let humanChoice = prompt("Choose Rock, Paper or Scissors");
+    humanChoice = window.prompt("Choose Rock, Paper or Scissors");
     humanChoice = humanChoice.toLowerCase();
-    console.log(humanChoice);
+    return humanChoice;
  }
 
 
@@ -69,7 +60,7 @@ Rock Paper Scissors Game
 
     getHumanChoice();
     getComputerChoice();
-    if (humanChoice === computerChoice){
+    if (humanChoice == computerChoice){
         return 'It is a Tie!'
     } else if (humanChoice == 'rock'){
         if (computerChoice == 'paper') {
@@ -91,3 +82,4 @@ Rock Paper Scissors Game
         }
     }
  }
+*/
