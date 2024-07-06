@@ -33,8 +33,7 @@ Rock Paper Scissors Game
  -play 5 rounds by calling playGame 5 times 
  - After 5 rounds of play reset the game*/ 
 
- let = getHumanScore = 0;
- let = getComputerScore = 0;
+ 
  
 
 
@@ -52,63 +51,66 @@ Rock Paper Scissors Game
  }
 
 
- function playRound(human, computer) {
-
-    human = getHumanChoice().toLowerCase();
-    computer = getComputerChoice();
-    if (human == computer){
-        console.log("Your score is " + getHumanScore)
-        console.log("The Computers score is " + getComputerScore)
-        return 'It is a Tie!'
-            
-    } else if (human == 'rock'){
-        if (computer == 'paper') {
-            getComputerScore++;
-            console.log("Your score is " + getHumanScore)
-            console.log("The Computers score is " + getComputerScore)
-            return 'The Computer Wins!'
-            
-        } else {
-            getHumanScore++;
-            console.log("Your score is " + getHumanScore)
-            console.log("The Computers score is " + getComputerScore)
-            return 'You Win!'
-            
-        }
-    } else if (human == 'paper'){
-        if (computer == 'scissors'){
-            getComputerScore++;
-            console.log("Your score is " + getHumanScore)
-            console.log("The Computers score is " + getComputerScore)
-            return 'The Computer Wins!'
-            
-        } else {
-            getHumanScore++;
-            console.log("Your score is " + getHumanScore)
-            console.log("The Computers score is " + getComputerScore)
-            return 'You Win!'
-            
-        }
-    } else if (human == 'scissors'){
-        if (computer == 'rock'){
-            getComputerScore++;
-            console.log("Your score is " + getHumanScore)
-            console.log("The Computers score is " + getComputerScore)
-            return 'The Computer Wins'
-            
-        } else {
-            getHumanScore++;
-            console.log("Your score is " + getHumanScore)
-            console.log("The Computers score is " + getComputerScore)
-            return 'You Win!'
-            
-        }
-    }
- }
+ 
 
  function playGame(){
-    for (i = 1; i <= 5 ; i++){
-        
+
+    let getHumanScore = 0;
+    let getComputerScore = 0;
+
+    for (let i = 1; i <= 5 ; i++){
+        function playRound(human, computer) {
+            human = getHumanChoice().toLowerCase();
+            computer = getComputerChoice();
+            if (human == computer){
+                console.log("Your score is " + getHumanScore)
+                console.log("The Computers score is " + getComputerScore)
+                return 'It is a Tie!'
+                    
+            } else if (human == 'rock'){
+                if (computer == 'paper') {
+                    getComputerScore++;
+                    console.log("Your score is " + getHumanScore)
+                    console.log("The Computers score is " + getComputerScore)
+                    return 'The Computer Wins!'
+                    
+                } else {
+                    getHumanScore++;
+                    console.log("Your score is " + getHumanScore)
+                    console.log("The Computers score is " + getComputerScore)
+                    return 'You Win!'
+                    
+                }
+            } else if (human == 'paper'){
+                if (computer == 'scissors'){
+                    getComputerScore++;
+                    console.log("Your score is " + getHumanScore)
+                    console.log("The Computers score is " + getComputerScore)
+                    return 'The Computer Wins!'
+                    
+                } else {
+                    getHumanScore++;
+                    console.log("Your score is " + getHumanScore)
+                    console.log("The Computers score is " + getComputerScore)
+                    return 'You Win!'
+                    
+                }
+            } else if (human == 'scissors'){
+                if (computer == 'rock'){
+                    getComputerScore++;
+                    console.log("Your score is " + getHumanScore)
+                    console.log("The Computers score is " + getComputerScore)
+                    return 'The Computer Wins'
+                    
+                } else {
+                    getHumanScore++;
+                    console.log("Your score is " + getHumanScore)
+                    console.log("The Computers score is " + getComputerScore)
+                    return 'You Win!'
+                    
+                }
+            }
+         }
 
     }
 
