@@ -28,3 +28,24 @@ Rock Paper Scissors Game
  -move playRound and score variables into playGame
  -play 5 rounds by calling playGame 5 times */ 
 
+ function computerChoice () {
+    let number = 0;
+    number = Math.floor(Math.random() * (3 - 1 + 1)) +1;
+   // console.log(number)
+
+    switch (number){
+        case 1:
+            number == 1;
+            return 'Rock'
+            break;
+        case 2:
+            number == 2;
+            return 'Paper'
+            break;
+        case 3:
+            number == 3;
+            return 'Scissors'
+            break;
+    }
+
+ }
