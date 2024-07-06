@@ -22,6 +22,10 @@ Rock Paper Scissors Game
  - make human chocie parameter case sentitive so that players can add rock ROCK rOcK etc
  - Write code for playRound function to console.log() representation of the winner of the round such as "You win, paper beats rock" etc
  -Increment the human score or computer score based on the winner
+  -Use an if statement to see if there is a tie
+  - then use an else/if statement for the three values rock, paper, scissors
+   - nest another if statement in each else/if to check if computer wins
+   - use an else statement to declare a player win
 
  5. Write logic to play entire game
  -Create new function called playGame
@@ -61,6 +65,6 @@ Rock Paper Scissors Game
  }
 
 
- function playRound () {
-    
+ function playRound (humanChoice, computerChoice) {
+
  }
