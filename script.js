@@ -34,8 +34,7 @@ Rock Paper Scissors Game
 
  let = getHumanScore = 0;
  let = getComputerScore = 0;
- let humanChoice;
- let computerChoice;
+ 
 
 
  function getComputerChoice() {
@@ -43,43 +42,38 @@ Rock Paper Scissors Game
     //console.log(number)
     let choices = ['rock','paper','scissors'];
     return choices[number];
-    
-
-    
  }
 
-/*
+
  function getHumanChoice(){
-    humanChoice = window.prompt("Choose Rock, Paper or Scissors");
-    humanChoice = humanChoice.toLowerCase();
+    humanChoice = window.prompt("Choose Rock, Paper or Scissors")
     return humanChoice;
  }
 
 
- function playRound (humanChoice, computerChoice) {
+ function playRound(human, computer) {
 
-    getHumanChoice();
-    getComputerChoice();
-    if (humanChoice == computerChoice){
+    human = getHumanChoice();
+    computer = getComputerChoice();
+    if (human == computer){
         return 'It is a Tie!'
-    } else if (humanChoice == 'rock'){
-        if (computerChoice == 'paper') {
+    } else if (human == 'rock'){
+        if (computer == 'paper') {
             return 'The Computer Wins!'
         } else {
             return 'You Win!'
         }
-    } else if (humanChoice == 'paper'){
-        if (computerChoice == 'scissors'){
+    } else if (human == 'paper'){
+        if (computer == 'scissors'){
             return 'The Computer Wins!'
         } else {
             return 'You Win!'
         }
-    } else if (humanChoice == 'scissors'){
-        if (computerChoice == 'rock'){
+    } else if (human == 'scissors'){
+        if (computer == 'rock'){
             return 'The Computer Wins'
         } else {
             return 'You Win!'
         }
     }
  }
-*/
