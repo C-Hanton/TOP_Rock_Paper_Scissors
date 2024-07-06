@@ -31,7 +31,7 @@ Rock Paper Scissors Game
  -Create new function called playGame
  -move playRound and score variables into playGame
  -play 5 rounds by calling playGame 5 times 
- - After 5 rounds of play reset the game*/ 
+ -add console logs to return the computer choice and player choice values*/ 
 
  
  
