@@ -111,7 +111,14 @@ Rock Paper Scissors Game
                 }
             }
          }
+         playRound();
 
     }
-
+    if (getHumanScore == getComputerScore){
+        console.log("You and the Computer Tie")
+    } else if (getHumanScore > getComputerScore){
+        console.log("You have beaten the Computer!")
+    } else {
+        console.log("The computer has Won!")
+    }
  }
