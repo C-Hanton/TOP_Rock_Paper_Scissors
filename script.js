@@ -30,7 +30,8 @@ Rock Paper Scissors Game
  5. Write logic to play entire game
  -Create new function called playGame
  -move playRound and score variables into playGame
- -play 5 rounds by calling playGame 5 times */ 
+ -play 5 rounds by calling playGame 5 times 
+ - After 5 rounds of play reset the game*/ 
 
  let = getHumanScore = 0;
  let = getComputerScore = 0;
@@ -102,7 +103,13 @@ Rock Paper Scissors Game
             return 'You Win!'
             
         }
-    
     }
-    
+ }
+
+ function playGame(){
+    for (i = 1; i <= 5 ; i++){
+        
+
+    }
+
  }
