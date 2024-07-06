@@ -19,7 +19,7 @@ Rock Paper Scissors Game
  4. Write the logic to play a single round
  - Create a function called playRound
  - give playRound two parameters (humanChocie, computerChoice)
- - make human chocie parameter case sentitive so that players can add rock ROCK rOcK etc
+ - make human choice parameter case sentitive so that players can add rock ROCK rOcK etc
  - Write code for playRound function to console.log() representation of the winner of the round such as "You win, paper beats rock" etc
  -Increment the human score or computer score based on the winner
   -Use an if statement to see if there is a tie
@@ -38,20 +38,20 @@ Rock Paper Scissors Game
  function getComputerChoice () {
     let number = 0;
     number = Math.floor(Math.random() * (3 - 1 + 1)) +1;
-   // console.log(number)
+    console.log(number)
 
     switch (number){
         case 1:
             number == 1;
-            return 'Rock'
+            return 'rock'
             break;
         case 2:
             number == 2;
-            return 'Paper'
+            return 'paper'
             break;
         case 3:
             number == 3;
-            return 'Scissors'
+            return 'scissors'
             break;
     }
 
@@ -61,10 +61,33 @@ Rock Paper Scissors Game
  function getHumanChoice(){
     let humanChoice = prompt("Choose Rock, Paper or Scissors");
     humanChoice = humanChoice.toLowerCase();
-    //console.log(humanChoice);
+    console.log(humanChoice);
  }
 
 
  function playRound (humanChoice, computerChoice) {
 
+    getHumanChoice();
+    getComputerChoice();
+    if (humanChoice === computerChoice){
+        return 'It is a Tie!'
+    } else if (humanChoice == 'rock'){
+        if (computerChoice == 'paper') {
+            return 'The Computer Wins!'
+        } else {
+            return 'You Win!'
+        }
+    } else if (humanChoice == 'paper'){
+        if (computerChoice == 'scissors'){
+            return 'The Computer Wins!'
+        } else {
+            return 'You Win!'
+        }
+    } else if (humanChoice == 'scissors'){
+        if (computerChoice == 'rock'){
+            return 'The Computer Wins'
+        } else {
+            return 'You Win!'
+        }
+    }
  }
