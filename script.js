@@ -56,24 +56,53 @@ Rock Paper Scissors Game
     human = getHumanChoice().toLowerCase();
     computer = getComputerChoice();
     if (human == computer){
+        console.log("Your score is " + getHumanScore)
+        console.log("The Computers score is " + getComputerScore)
         return 'It is a Tie!'
+            
     } else if (human == 'rock'){
         if (computer == 'paper') {
+            getComputerScore++;
+            console.log("Your score is " + getHumanScore)
+            console.log("The Computers score is " + getComputerScore)
             return 'The Computer Wins!'
+            
         } else {
+            getHumanScore++;
+            console.log("Your score is " + getHumanScore)
+            console.log("The Computers score is " + getComputerScore)
             return 'You Win!'
+            
         }
     } else if (human == 'paper'){
         if (computer == 'scissors'){
+            getComputerScore++;
+            console.log("Your score is " + getHumanScore)
+            console.log("The Computers score is " + getComputerScore)
             return 'The Computer Wins!'
+            
         } else {
+            getHumanScore++;
+            console.log("Your score is " + getHumanScore)
+            console.log("The Computers score is " + getComputerScore)
             return 'You Win!'
+            
         }
     } else if (human == 'scissors'){
         if (computer == 'rock'){
+            getComputerScore++;
+            console.log("Your score is " + getHumanScore)
+            console.log("The Computers score is " + getComputerScore)
             return 'The Computer Wins'
+            
         } else {
+            getHumanScore++;
+            console.log("Your score is " + getHumanScore)
+            console.log("The Computers score is " + getComputerScore)
             return 'You Win!'
+            
         }
+    
     }
+    
  }
