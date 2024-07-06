@@ -62,6 +62,8 @@ Rock Paper Scissors Game
         function playRound(human, computer) {
             human = getHumanChoice().toLowerCase();
             computer = getComputerChoice();
+            console.log("You chose " + human);
+            console.log("The Computer chose " + computer)
             if (human == computer){
                 console.log("Your score is " + getHumanScore)
                 console.log("The Computers score is " + getComputerScore)
