@@ -44,32 +44,21 @@ Rock Paper Scissors Game
     return choices[number];
  }
 
-
- function getHumanChoice(){
-    humanChoice = window.prompt("Choose Rock, Paper or Scissors")
-    return humanChoice;
- }
-
-
- 
-
- function playGame(){
-
     let getHumanScore = 0;
     let getComputerScore = 0;
 
-    for (let i = 1; i <= 5 ; i++){
-        function playRound(human, computer) {
-            human = getHumanChoice().toLowerCase();
+    
+        function playRound(humanChoice) {
+            
             computer = getComputerChoice();
-            console.log("You chose " + human);
+            console.log("You chose " + humanChoice);
             console.log("The Computer chose " + computer)
-            if (human == computer){
+            if (humanChoice == computer){
                 console.log("Your score is " + getHumanScore)
                 console.log("The Computers score is " + getComputerScore)
                 return 'It is a Tie!'
                     
-            } else if (human == 'rock'){
+            } else if (humanChoice == 'rock'){
                 if (computer == 'paper') {
                     getComputerScore++;
                     console.log("Your score is " + getHumanScore)
@@ -83,7 +72,7 @@ Rock Paper Scissors Game
                     return 'You Win!'
                     
                 }
-            } else if (human == 'paper'){
+            } else if (humanChoice == 'paper'){
                 if (computer == 'scissors'){
                     getComputerScore++;
                     console.log("Your score is " + getHumanScore)
@@ -97,7 +86,7 @@ Rock Paper Scissors Game
                     return 'You Win!'
                     
                 }
-            } else if (human == 'scissors'){
+            } else if (humanChoice == 'scissors'){
                 if (computer == 'rock'){
                     getComputerScore++;
                     console.log("Your score is " + getHumanScore)
@@ -113,14 +102,30 @@ Rock Paper Scissors Game
                 }
             }
          }
-         playRound();
+         ;
 
-    }
-    if (getHumanScore == getComputerScore){
+    
+    /*if (getHumanScore == getComputerScore){
         console.log("You and the Computer Tie")
     } else if (getHumanScore > getComputerScore){
         console.log("You have beaten the Computer!")
     } else {
         console.log("The computer has Won!")
-    }
- }
+    }*/
+
+        document.getElementById('rock').addEventListener('click', function () {
+            playRound('rock')
+            console.log('rock');
+        });
+        
+        document.getElementById('paper').addEventListener('click', function () {
+            playRound('paper');
+        });
+        
+        document.getElementById('scissors').addEventListener('click', function () {
+            playRound('scissors');
+        });
+
+
+
+
