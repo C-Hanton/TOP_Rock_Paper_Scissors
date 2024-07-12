@@ -44,74 +44,86 @@ Rock Paper Scissors Game
     return choices[number];
  }
 
-    let getHumanScore = 0;
-    let getComputerScore = 0;
+let getHumanScore = 0;
+let getComputerScore = 0;
 
     
         function playRound(humanChoice) {
+            let humanScore = document.querySelector(".humanResult");
             
+
+            let computerScore = document.querySelector(".computerResult");
+            
+
+
             computer = getComputerChoice();
             console.log("You chose " + humanChoice);
             console.log("The Computer chose " + computer)
+
+            let roundMessage = document.querySelector(".roundWin");
+
             if (humanChoice == computer){
-                console.log("Your score is " + getHumanScore)
-                console.log("The Computers score is " + getComputerScore)
-                return 'It is a Tie!'
+                humanScore.textContent = "Your score is: " + getHumanScore;
+                computerScore.textContent = "Your score is: " + getComputerScore;
+                roundMessage.textContent = `It is a tie!`
                     
             } else if (humanChoice == 'rock'){
                 if (computer == 'paper') {
-                    getComputerScore++;
-                    console.log("Your score is " + getHumanScore)
-                    console.log("The Computers score is " + getComputerScore)
-                    return 'The Computer Wins!'
+                    ++getComputerScore;
+                    humanScore.textContent = "Your score is: " + getHumanScore;
+                    computerScore.textContent = "Your score is: " + getComputerScore;
+                    roundMessage.textContent = `You Lose! ${computer} beats ${humanChoice}`
                     
                 } else {
-                    getHumanScore++;
-                    console.log("Your score is " + getHumanScore)
-                    console.log("The Computers score is " + getComputerScore)
-                    return 'You Win!'
+                    ++getHumanScore;
+                    humanScore.textContent = "Your score is: " + getHumanScore;
+                    computerScore.textContent = "Your score is: " + getComputerScore;
+                    roundMessage.textContent = `You Win! ${humanChoice} beats ${computer}`
                     
                 }
             } else if (humanChoice == 'paper'){
                 if (computer == 'scissors'){
-                    getComputerScore++;
-                    console.log("Your score is " + getHumanScore)
-                    console.log("The Computers score is " + getComputerScore)
-                    return 'The Computer Wins!'
+                    ++getComputerScore;
+                    humanScore.textContent = "Your score is: " + getHumanScore;
+                    computerScore.textContent = "Your score is: " + getComputerScore;
+                    roundMessage.textContent = `You Lose! ${computer} beats ${humanChoice}`
                     
                 } else {
-                    getHumanScore++;
-                    console.log("Your score is " + getHumanScore)
-                    console.log("The Computers score is " + getComputerScore)
-                    return 'You Win!'
+                    ++getHumanScore;
+                    humanScore.textContent = "Your score is: " + getHumanScore;
+                    computerScore.textContent = "Your score is: " + getComputerScore;
+                    roundMessage.textContent = `You Win! ${humanChoice} beats ${computer}`
                     
                 }
             } else if (humanChoice == 'scissors'){
                 if (computer == 'rock'){
-                    getComputerScore++;
-                    console.log("Your score is " + getHumanScore)
-                    console.log("The Computers score is " + getComputerScore)
-                    return 'The Computer Wins'
+                    ++getComputerScore
+                    humanScore.textContent = "Your score is: " + getHumanScore;
+                    computerScore.textContent = "Your score is: " + getComputerScore;
+                    roundMessage.textContent = `You Lose! ${computer} beats ${humanChoice}`
                     
                 } else {
-                    getHumanScore++;
-                    console.log("Your score is " + getHumanScore)
-                    console.log("The Computers score is " + getComputerScore)
-                    return 'You Win!'
+                    ++getHumanScore;
+                    roundMessage.textContent = `You Win! ${humanChoice} beats ${computer}`
                     
                 }
             }
+
+            humanScore.textContent = "Your score is: " + getHumanScore;
+            computerScore.textContent = "Your score is: " + getComputerScore;
+
+            function checkGameWinner (){
+                if (getHumanScore >= 5 || getComputerScore >= 5) {
+                    const winnerMessage = getHumanScore > getComputerScore ? "Congratulations you are the winner!" : "Sorry! The Computer has won!"
+                    document.querySelector(".gameWinner").textContent = winnerMessage;
+                }
+            }
+            
+            checkGameWinner();
          }
          ;
 
-    
-    /*if (getHumanScore == getComputerScore){
-        console.log("You and the Computer Tie")
-    } else if (getHumanScore > getComputerScore){
-        console.log("You have beaten the Computer!")
-    } else {
-        console.log("The computer has Won!")
-    }*/
+
 
         document.getElementById('rock').addEventListener('click', function () {
             playRound('rock')
@@ -125,6 +137,16 @@ Rock Paper Scissors Game
         document.getElementById('scissors').addEventListener('click', function () {
             playRound('scissors');
         });
+
+
+        function checkGameWinner (){
+            if (getHumanScore >= 5 || getComputerScore >= 5) {
+                const winnerMessage = getHumanScore > getComputerScore ? "Congratulations you are the winner!" : "Sorry! The Computer has won!"
+                document.querySelector(".gameWinner").textContent = winnerMessage;
+            }
+        }
+
+    
 
 
 
