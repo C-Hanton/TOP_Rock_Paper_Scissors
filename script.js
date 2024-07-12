@@ -118,7 +118,7 @@ let getComputerScore = 0;
                     document.querySelector(".gameWinner").textContent = winnerMessage;
                 }
             }
-            
+
             checkGameWinner();
          }
          ;
@@ -143,7 +143,14 @@ let getComputerScore = 0;
             if (getHumanScore >= 5 || getComputerScore >= 5) {
                 const winnerMessage = getHumanScore > getComputerScore ? "Congratulations you are the winner!" : "Sorry! The Computer has won!"
                 document.querySelector(".gameWinner").textContent = winnerMessage;
+                resetGame();
             }
+        }
+
+        function resetGame () {
+            getHumanScore = 0;
+            getComputerScore = 0;
+
         }
 
     
