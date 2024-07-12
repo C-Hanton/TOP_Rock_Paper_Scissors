@@ -112,18 +112,18 @@ let getComputerScore = 0;
             humanScore.textContent = "Your score is: " + getHumanScore;
             computerScore.textContent = "Your score is: " + getComputerScore;
 
-            function checkGameWinner (){
-                if (getHumanScore >= 5 || getComputerScore >= 5) {
-                    const winnerMessage = getHumanScore > getComputerScore ? "Congratulations you are the winner!" : "Sorry! The Computer has won!"
-                    document.querySelector(".gameWinner").textContent = winnerMessage;
-                }
-            }
+            
 
             checkGameWinner();
          }
          ;
 
-
+         function checkGameWinner (){
+            if (getHumanScore >= 5 || getComputerScore >= 5) {
+                const winnerMessage = getHumanScore > getComputerScore ? "Congratulations you are the winner!" : "Sorry! The Computer has won!"
+                document.querySelector(".gameWinner").textContent = winnerMessage;
+            }
+        }
 
         document.getElementById('rock').addEventListener('click', function () {
             playRound('rock')
@@ -150,7 +150,8 @@ let getComputerScore = 0;
         function resetGame () {
             getHumanScore = 0;
             getComputerScore = 0;
-
+            document.querySelector(".humanResult").textContent = `Your score is: ${getHumanScore}`;
+            document.querySelector(".computerResult").textContent = `The Computer score is: ${getComputerScore}`;
         }
 
     
